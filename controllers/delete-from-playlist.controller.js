@@ -11,7 +11,7 @@ const deleteFromPlaylist = async (req, res) => {
             }
         })
         user.save()
-        res.status(400).json({ success: true, playlist: user.playlists })
+        res.status(400).json({ success: true, playlists: user.playlists })
     } catch (error) {
         res.status(400).json({ success: false, message: 'failed to delete from the specified playlist' })
     }
